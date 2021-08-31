@@ -4,6 +4,7 @@ import java.util.Locale;
 
 public class ValidPalindrome {
 
+    /* Find valid palindromes while ignoring non-alphabetic characters */
     public static boolean run(String in) {
         in = in.toLowerCase(Locale.ENGLISH);
 
