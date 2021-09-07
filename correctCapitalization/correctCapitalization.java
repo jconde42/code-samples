@@ -15,12 +15,13 @@ public class correctCapitalization {
             return (isFirstUpper || !isSecondUpper);
         }
 
-        // if first is upper -> check second, if second is lower -> all rest all lower else all rest are upper
+        if (!isFirstUpper && isSecondUpper) // Short Circuit
+            return false;
+
         if (isFirstUpper && isSecondUpper) {
-            return !isCharsNToEndLower(chars, 2, stringLength);
+            return !isCharsNToEndLower(chars, 2, stringLength);  // All capitalized
         } else {
-            // all others should be lower
-            return isCharsNToEndLower(chars, 1, stringLength);
+            return isCharsNToEndLower(chars, 1, stringLength); // chars[1..end] should be lower
         }
     }
 

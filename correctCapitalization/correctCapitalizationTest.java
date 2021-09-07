@@ -59,6 +59,14 @@ class correctCapitalizationTest {
         assertFalse(out);
     }
 
+    void isCorrectCapitalizedWithaBcReturnsFalse() {
+        String in = "aBc";
+
+        boolean out = correctCapitalization.run(in);
+
+        assertFalse(out);
+    }
+
     void isCorrectCapitalizedUSAReturnTrue() {
         String in = "USA";
 
