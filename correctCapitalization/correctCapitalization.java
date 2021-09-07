@@ -16,16 +16,8 @@ public class correctCapitalization {
         }
 
         // if first is upper -> check second, if second is lower -> all rest all lower else all rest are upper
-        if (isFirstUpper) {
-            if (isSecondUpper) {
-                // All chars should be upper
-                return !isCharsNToEndLower(chars, 2, stringLength);
-
-            } else {
-                // all chars[2..] should be lower
-                return isCharsNToEndLower(chars, 2, stringLength);
-            }
-
+        if (isFirstUpper && isSecondUpper) {
+            return !isCharsNToEndLower(chars, 2, stringLength);
         } else {
             // all others should be lower
             return isCharsNToEndLower(chars, 1, stringLength);
